@@ -2,7 +2,7 @@ import google.generativeai as genai
 from datetime import datetime
 
 # Configurações da API da IA ou buscador utilizado
-GOOGLE_API_KEY = "AIzaSyAuNbQbTtXNEznpOg-o2PGGVQW2YjxS4_0"
+GOOGLE_API_KEY = "SUA KEY DO API INSIRA AQUI"
 genai.configure(api_key=GOOGLE_API_KEY)
 
 print("Verificando modelos disponíveis...")
