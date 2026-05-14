@@ -2,7 +2,9 @@ import google.generativeai as genai
 from datetime import datetime
 
 # Configurações da API da IA ou buscador utilizado
+#Key do API
 GOOGLE_API_KEY = "SUA KEY DO API INSIRA AQUI"
+#Key ao API
 genai.configure(api_key=GOOGLE_API_KEY)
 
 print("Verificando modelos disponíveis...")
@@ -36,12 +38,12 @@ try:
         # Lembre-se de sempre atualizar o diretorio de sua maquina antes de executar, para garantir que o bloco
         # de notas será gerado, bastando o cd "etc......\Pesquisa automatizada" no terminal
         data_atual = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        with open("dados-pesquisa.txt", "a", encoding="utf-8") as arquivo:
+        with open("dados-pesquisa.json", "a", encoding="utf-8") as arquivo:
             arquivo.write(f"\n--- DATA DE GERAÇÃO: {data_atual} ---\n")
             arquivo.write(conteudo_post)
             arquivo.write("\n" + "="*30 + "\n")
 
-        print(f"\nO post foi salvo com sucesso em 'dados-pesquisa.txt'!")
+        print(f"\nO post foi salvo com sucesso em 'dados-pesquisa.json'!")
 
     else:
         print("Nenhum modelo disponível encontrado. Verifique sua API Key.")
