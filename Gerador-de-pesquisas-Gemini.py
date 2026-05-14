@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Configurações da API da IA ou buscador utilizado
 #Key do API
-GOOGLE_API_KEY = "Sua Key aqui"
+GOOGLE_API_KEY = "SUA KEY AQUI"
 #Key ao API
 genai.configure(api_key=GOOGLE_API_KEY)
 
@@ -39,8 +39,8 @@ try:
         print("="*40 + "\n")
         print(conteudo_post)
 
-        # Salvar o post direto num bloco de notas
-        # Lembre-se de sempre atualizar o diretorio de sua maquina antes de executar, para garantir que o bloco
+        # Salvar o post direto num bloco de notas/md
+        # Lembre-sse de sempre atualizar o diretorio de sua maquina antes de executar, para garantir que o bloco
         # de notas será gerado, bastando o cd "etc......\Pesquisa automatizada" no terminal
         data_atual = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         with open("dados-pesquisa.json", "a", encoding="utf-8") as arquivo:
