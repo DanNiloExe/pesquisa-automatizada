@@ -3,7 +3,7 @@ from datetime import datetime
 
 # Configurações da API da IA ou buscador utilizado
 #Key do API
-GOOGLE_API_KEY = "SUA KEY DO API INSIRA AQUI"
+GOOGLE_API_KEY = "Sua Key aqui"
 #Key ao API
 genai.configure(api_key=GOOGLE_API_KEY)
 
@@ -17,11 +17,16 @@ try:
         
         model = genai.GenerativeModel(nome_modelo)
         
-        # Prompt de pesquisa do tema desejado
+        # Prompt de pesquisa do tema desejado, e da maneria de escrita desejada
         prompt = (
-            "Crie um post de LinkedIn. "
-            "Tema:  ESG e sustentabilidade . "
-            "O tom deve ser profissional e focado em resultados práticos, porém mantendo o bom humor e leveza."
+            "Atue como um Especialista em Branding Pessoal para criar um post de LinkedIn de alta performance. "
+            "O tema principal é 'ESG e Sustentabilidade'. "
+            "A escrita deve ser a prioridade: utilize um tom profissional e de autoridade, focado em resultados práticos, "
+            "mas quebre a rigidez corporativa com bom humor e leveza. "
+            "Estruture o post com um gancho impactante na primeira linha, parágrafos curtos, e forneça 3 dicas práticas "
+            "de implementação imediata nas empresas. "
+            "Finalize com uma provocação leve sobre processos burocráticos e um CTA que incentive o engajamento, "
+            "limitando-se a no máximo 3 emojis e 3 hashtags."
         )
 
         # Resultado
